@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-check:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with warnings as errors
+        run: swift build -Xswiftc -warnings-as-errors
+      - name: Run self-checks
+        run: swift run dualview-checks
+      - name: Check version consistency
+        run: test "$(swift run dualview --version)" = "DualView $(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' Packaging/Info.plist)"
+      - name: Check formatting
+        run: xcrun swift-format lint --recursive Sources Checks Package.swift
+      - name: Check release script syntax
+        run: sh -n Scripts/build-app.sh

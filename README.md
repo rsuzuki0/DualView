@@ -1,4 +1,3 @@
-/opt/homebrew/bin/bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8): No such file or directory
 # DualView
 
 DualView is a minimal one- or two-display image presenter for macOS. It creates one borderless
