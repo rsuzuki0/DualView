@@ -28,6 +28,8 @@ This is an early public build intended for practical testing.
 - Automated one-display sequencing and random-permutation invariants pass.
 - The ImageIO metadata path reads macOS-supplied JPEG, PNG, HEIC, and GIF files without warnings.
 - Mixed landscape-and-portrait displays have been used interactively.
+- Dual-monitor Apple Silicon and a single-monitor Intel laptop running macOS Catalina have been
+  used successfully in interactive testing.
 - Large JPEG files and deeply nested recursive directory input have been used interactively.
 
 ## New in 0.5.0
@@ -48,7 +50,6 @@ This is an early public build intended for practical testing.
 - Physical one-screen rotation and the new progress overlays.
 - HEIC, PNG, and animated GIF input in a full presentation.
 - USB footswitches and presentation remotes from different vendors.
-- Intel Macs and older supported macOS releases.
 
 ## Signing
 
