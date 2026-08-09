@@ -229,7 +229,7 @@ do {
         warning: { _ in }
     )
     try expect(
-.map { $0.url.resolvingSymlinksInPath() },
+        concatenated.map { $0.url.resolvingSymlinksInPath() },
         [image, image, listedSlide2, listedSlide10, image, image].map {
             $0.resolvingSymlinksInPath()
         },
